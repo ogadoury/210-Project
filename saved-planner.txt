@@ -1,0 +1,1 @@
+{"dates":[{"date":"01\/01\/2019","plans":[]},{"date":"01\/01\/2019","plans":[]},{"date":"02\/01\/2019","plans":["Clean up from NYE"]},{"date":"01\/01\/2019","plans":[]},{"date":"01\/01\/2019","plans":[]},{"date":"02\/01\/2019","plans":["Clean up from NYE"]}]}
