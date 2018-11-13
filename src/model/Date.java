@@ -44,7 +44,7 @@ public class Date {
 
     public void printPlans() {
         for(Plan p : plans) {
-            System.out.println(p.getActivity());
+            System.out.println("\t - " + p.getActivity());
         }
     }
 

@@ -36,7 +36,6 @@ public class CreateJSONFile {
         }
         try {
             file.write(schedule.toJson());
-            System.out.println("Successfully Copied JSON Object to File...");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

@@ -34,9 +34,8 @@ public class Schedule {
     // MAIN RUN FUNCTION
 
     public void run() {
-        loadSchedule();
         System.out.println("Please choose an option for the Schedule:");
-        System.out.println("AddDate, RemoveDate, AddPlan, RemovePlan, PrintSchedule, READ");
+        System.out.println("AddDate, RemoveDate, AddPlan, RemovePlan, PrintSchedule, Quit");
         String userIn = scanner.nextLine();
         if (userIn.equals("AddDate")) {
             userAddDate();
@@ -57,6 +56,8 @@ public class Schedule {
         } else if (userIn.equals("PrintSchedule")) {
             printDates();
             run();
+        } else if (userIn.equals("Quit")) {
+            System.out.println("Ciao!");
         } else {
             // throw error
             System.out.println("WRONG OUTPUT");
@@ -87,9 +88,11 @@ public class Schedule {
 
     // EFFECTS: prints out the current list of dates
     public void printDates() {
+        System.out.println("\n");
         for (Date d : dates) {
             System.out.println(d.getDate());
             d.printPlans();
+            System.out.println("\n");
         }
     }
 
