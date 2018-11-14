@@ -35,7 +35,7 @@ public class Schedule {
 
     public void run() {
         System.out.println("Please choose an option for the Schedule:");
-        System.out.println("AddDate, RemoveDate, AddPlan, RemovePlan, PrintSchedule, Quit");
+        System.out.println("AddDate, RemoveDate, RemoveAll, AddPlan, RemovePlan, PrintSchedule, Quit");
         String userIn = scanner.nextLine();
         if (userIn.equals("AddDate")) {
             userAddDate();
@@ -43,6 +43,10 @@ public class Schedule {
             run();
         } else if (userIn.equals("RemoveDate")) {
             userRemoveDate();
+            saveSchedule();
+            run();
+        } else if (userIn.equals("RemoveAll")) {
+            removeAllDates();
             saveSchedule();
             run();
         } else if (userIn.equals("AddPlan")) {
@@ -83,6 +87,15 @@ public class Schedule {
     // EFFECTS: removes the given date from the schedule's list of dates
     public void removeDate(Date d) {
         dates.remove(d);
+    }
+
+    // REQUIRES: The date given exists in the schedule's list of dates
+    // MODIFIES: this
+    // EFFECTS: removes all dates from the schedule's list of dates
+    public void removeAllDates() {
+        for (Date d : dates) {
+            removeDate(d);
+        }
     }
 
 
