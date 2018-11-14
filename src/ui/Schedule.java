@@ -1,6 +1,7 @@
 package ui;
 
 import model.Date;
+import model.Guest;
 import model.Plan;
 
 import java.io.IOException;
@@ -39,28 +40,27 @@ public class Schedule {
         String userIn = scanner.nextLine();
         if (userIn.equals("AddDate")) {
             userAddDate();
-            saveSchedule();
             run();
         } else if (userIn.equals("RemoveDate")) {
             userRemoveDate();
-            saveSchedule();
             run();
         } else if (userIn.equals("RemoveAll")) {
             removeAllDates();
-            saveSchedule();
             run();
         } else if (userIn.equals("AddPlan")) {
             userAddPlan();
-            saveSchedule();
             run();
         } else if (userIn.equals("RemovePlan")) {
             userRemovePlan();
-            saveSchedule();
             run();
         } else if (userIn.equals("PrintSchedule")) {
             printDates();
             run();
+        } else if (userIn.equals("Save")) {
+            saveSchedule();
+            run();
         } else if (userIn.equals("Quit")) {
+            saveSchedule();
             System.out.println("Ciao!");
         } else {
             // throw error
@@ -86,6 +86,9 @@ public class Schedule {
     // MODIFIES: this
     // EFFECTS: removes the given date from the schedule's list of dates
     public void removeDate(Date d) {
+        for (Plan p : d.getPlans()) {
+            p.cancelPlan();
+        }
         dates.remove(d);
     }
 
@@ -93,9 +96,7 @@ public class Schedule {
     // MODIFIES: this
     // EFFECTS: removes all dates from the schedule's list of dates
     public void removeAllDates() {
-        for (Date d : dates) {
-            removeDate(d);
-        }
+        setDates(new ArrayList<>());
     }
 
 
@@ -147,6 +148,12 @@ public class Schedule {
                 Plan p = new Plan();
                 p.setActivity(planName);
                 findDateAndAddPlan(dateName, p);
+                // add observer to plan here
+                System.out.println("Add guests to this plan?");
+                String addguests = scanner.nextLine();
+                if (addguests.equals("Y")) {
+                    userAddGuests(p);
+                }
             }
         } else {
             System.out.println("The date given does not exist");
@@ -163,6 +170,14 @@ public class Schedule {
         } else {
             System.out.println("The date given does not exist.");
         }
+    }
+
+    public void userAddGuests(Plan p) {
+        System.out.println("What is the name of the guest to be added?");
+        String guestName = scanner.nextLine();
+        Guest g = new Guest();
+        g.setName(guestName);
+        p.addObserver(g);
     }
 
 
@@ -200,6 +215,7 @@ public class Schedule {
             if (d.getDate().equals(dateName)) {
                 for (Plan p : d.getPlans()) {
                     if (p.getActivity().equals(planName)) {
+                        p.cancelPlan();
                         d.removePlan(p);
                     }
                 }

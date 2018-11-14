@@ -9,6 +9,7 @@ import model.Plan;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.ArrayList;
 
 public class ReadJSONFile {
     public static void run () {
@@ -17,9 +18,11 @@ public class ReadJSONFile {
         try  {
             FileReader fileReader = new FileReader(jsonFilePath);
             JsonObject json = (JsonObject) Jsoner.deserialize(fileReader);
-            JsonArray dates = (JsonArray) json.get("dates");
+            JsonArray jsonDates = (JsonArray) json.get("dates");
 
-            for (Object d : dates){
+            ArrayList<Date> dates = new ArrayList<>();
+
+            for (Object d : jsonDates){
                 JsonObject day = (JsonObject) d;
                 String date = (String) day.get("date");
                 JsonArray plans = (JsonArray) day.get("plans");
@@ -30,7 +33,8 @@ public class ReadJSONFile {
                     p.setActivity(plan.toString());
                     newDate.addPlan(p);
                 }
-                Schedule.addDate(newDate);
+                dates.add(newDate);
+                Schedule.setDates(dates);
             }
 
 //            JsonArray dates = (JsonArray) json.get("dates");

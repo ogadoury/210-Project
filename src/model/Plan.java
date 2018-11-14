@@ -1,7 +1,12 @@
 package model;
 
-public class Plan {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Observable;
+
+public class Plan extends Observable {
     private String activity;
+    private List<Guest> guests = new ArrayList<>();
 
     public String getActivity() {
         return activity;
@@ -11,4 +16,17 @@ public class Plan {
         this.activity = activity;
     }
 
+    public void addObserver (Guest g) {
+        guests.add(g);
+    }
+
+    public void removeObserver (Guest g) {
+        guests.remove(g);
+    }
+
+    public void cancelPlan() {
+        for (Guest guest : guests) {
+            guest.update(this, this);
+        }
+    }
 }
