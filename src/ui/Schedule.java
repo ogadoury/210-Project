@@ -42,7 +42,7 @@ public class Schedule {
             AddDate.main();
             run();
         } else if (userIn.equals("RemoveDate")) {
-            userRemoveDate();
+            RmDate.main();
             run();
         } else if (userIn.equals("RemoveAll")) {
             removeAllDates();
@@ -51,7 +51,7 @@ public class Schedule {
             AddPlan.main();
             run();
         } else if (userIn.equals("RemovePlan")) {
-            userRemovePlan();
+            RmPlan.main();
             run();
         } else if (userIn.equals("PrintSchedule")) {
             printDates();
@@ -86,7 +86,7 @@ public class Schedule {
     // REQUIRES: The date given exists in the schedule's list of dates
     // MODIFIES: this
     // EFFECTS: removes the given date from the schedule's list of dates
-    public void removeDate(Date d) {
+    public static void removeDate(Date d) {
         for (Plan p : d.getPlans()) {
             p.cancelPlan();
         }
@@ -193,7 +193,7 @@ public class Schedule {
         return foundDate;
     }
 
-    public void findAndRemoveDate(String dateName) {
+    public static void findAndRemoveDate(String dateName) {
         for (Date d : dates) {
             if (d.getDate().equals(dateName)) {
                 removeDate(d);
@@ -209,7 +209,7 @@ public class Schedule {
         }
     }
 
-    public void findDateAndRmPlan(String dateName, String planName) {
+    public static void findDateAndRmPlan(String dateName, String planName) {
         for (Date d : dates) {
             if (d.getDate().equals(dateName)) {
                 for (Plan p : d.getPlans()) {
