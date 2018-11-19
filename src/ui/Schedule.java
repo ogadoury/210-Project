@@ -39,7 +39,7 @@ public class Schedule {
         System.out.println("AddDate, RemoveDate, RemoveAll, AddPlan, RemovePlan, PrintSchedule, Quit");
         String userIn = scanner.nextLine();
         if (userIn.equals("AddDate")) {
-            userAddDate();
+            AddDate.main();
             run();
         } else if (userIn.equals("RemoveDate")) {
             userRemoveDate();
@@ -48,7 +48,7 @@ public class Schedule {
             removeAllDates();
             run();
         } else if (userIn.equals("AddPlan")) {
-            userAddPlan();
+            AddPlan.main();
             run();
         } else if (userIn.equals("RemovePlan")) {
             userRemovePlan();
@@ -62,6 +62,7 @@ public class Schedule {
         } else if (userIn.equals("Quit")) {
             saveSchedule();
             System.out.println("Ciao!");
+            System.exit(0);
         } else {
             // throw error
             System.out.println("WRONG OUTPUT");
@@ -101,7 +102,7 @@ public class Schedule {
 
 
     // EFFECTS: prints out the current list of dates
-    public void printDates() {
+    public static void printDates() {
         System.out.println("\n");
         for (Date d : dates) {
             System.out.println(d.getDate());
@@ -113,17 +114,15 @@ public class Schedule {
 
     // USER FUNCTIONALITY
 
-    public void userAddDate() {
-        System.out.println("What is the date you would like to add?");
-        String dateToAdd = scanner.nextLine();
-        if (!findDate(dateToAdd)) {
-            Date d = new Date();
-            d.setDate(dateToAdd);
-            addDate(d);
-        } else {
-            System.out.println("That date already exists in the schedule.");
-        }
-    }
+
+//
+//    public void userAddDate() {
+//        String dateToAdd = ;
+//        if (!findDate(dateToAdd)) {
+//        } else {
+//            System.out.println("That date already exists in the schedule.");
+//        }
+//    }
 
     public void userRemoveDate() {
         System.out.println("Which date would you like to remove?");
@@ -184,7 +183,7 @@ public class Schedule {
     // GENERAL HELPERS
 
 
-    public boolean findDate(String dateName) {
+    public static boolean findDate(String dateName) {
         boolean foundDate = false;
         for (Date date : dates) {
             if (date.getDate().equals(dateName)) {
@@ -202,7 +201,7 @@ public class Schedule {
         }
     }
 
-    public void findDateAndAddPlan(String dateName, Plan plan) {
+    public static void findDateAndAddPlan(String dateName, Plan plan) {
         for (Date d : dates) {
             if (d.getDate().equals(dateName)) {
                 d.addPlan(plan);

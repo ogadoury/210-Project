@@ -8,7 +8,6 @@ public class Date implements Observer {
 
     private String date;
     private ArrayList<Plan> plans;
-    private ArrayList<Plan> reminderPlans;
 
     public Date() {
         this.date = getDate();
@@ -64,14 +63,6 @@ public class Date implements Observer {
     @Override
     public void update(Observable o, Object arg) {
 
-    }
-
-    public ArrayList<Plan> getReminderPlans() {
-        return reminderPlans;
-    }
-
-    public void addReminderPlan (Plan p) {
-        reminderPlans.add(p);
     }
 
 
