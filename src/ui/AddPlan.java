@@ -7,10 +7,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AddPlan {
+    private static JFrame frame = guiMain.frame;
     private JTextField PlanActivity;
     private JTextField GuestName;
     private JButton AddBtn;
-    private JPanel panelMain;
+    JPanel panelMain;
     private JTextField dateTo;
 
     public AddPlan() {
@@ -25,6 +26,12 @@ public class AddPlan {
                     newPlan.setActivity(PlanActivity.getText());
                     Schedule.findDateAndAddPlan(DateName, newPlan);
                     Schedule.printDates();
+
+                    // back to main window
+                    frame.setContentPane(new guiMain().panelMain);
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame.pack();
+                    frame.setVisible(true);
                 } else {
                     System.out.println("the date given does not exist!");
                 }
@@ -33,7 +40,6 @@ public class AddPlan {
     }
 
     public static void main() {
-        JFrame frame = new JFrame("AddPlan");
         frame.setContentPane(new AddPlan().panelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();

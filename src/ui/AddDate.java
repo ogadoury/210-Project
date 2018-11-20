@@ -7,10 +7,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AddDate {
+    private static JFrame frame = guiMain.frame;
     private JButton addDateButton;
     private JTextArea DateName;
     private JLabel DateLabel;
-    private JPanel panelMain;
+    JPanel panelMain;
 
 
     public AddDate() {
@@ -22,13 +23,18 @@ public class AddDate {
                 newDate.setDate(dateName);
                 Schedule.addDate(newDate);
                 System.out.println(newDate.getDate() + " successfully created.");
+
+                // back to main window
+                frame.setContentPane(new guiMain().panelMain);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
             }
         });
     }
 
 
     public static void main() {
-        JFrame frame = new JFrame("AddDate");
         frame.setContentPane(new AddDate().panelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();

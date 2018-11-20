@@ -5,7 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class RmDate {
-    private JPanel panelMain;
+    private static JFrame frame = guiMain.frame;
+    JPanel panelMain;
     private JButton removeButton;
     private JTextField dateName;
     private JLabel dateLabel;
@@ -16,12 +17,17 @@ public class RmDate {
             @Override
             public void actionPerformed(ActionEvent e) {
                Schedule.findAndRemoveDate(dateName.getText());
+
+                // back to main window
+                frame.setContentPane(new guiMain().panelMain);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
             }
         });
     }
 
     public static void main() {
-        JFrame frame = new JFrame("RmDate");
         frame.setContentPane(new RmDate().panelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();

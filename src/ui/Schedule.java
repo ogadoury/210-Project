@@ -35,40 +35,7 @@ public class Schedule {
     // MAIN RUN FUNCTION
 
     public void run() {
-        System.out.println("Please choose an option for the Schedule:");
-        System.out.println("AddDate, RemoveDate, RemoveAll, AddPlan, RemovePlan, PrintSchedule, Quit");
-        String userIn = scanner.nextLine();
-        if (userIn.equals("AddDate")) {
-            AddDate.main();
-            run();
-        } else if (userIn.equals("RemoveDate")) {
-            RmDate.main();
-            run();
-        } else if (userIn.equals("RemoveAll")) {
-            removeAllDates();
-            run();
-        } else if (userIn.equals("AddPlan")) {
-            AddPlan.main();
-            run();
-        } else if (userIn.equals("RemovePlan")) {
-            RmPlan.main();
-            run();
-        } else if (userIn.equals("PrintSchedule")) {
-            printDates();
-            run();
-        } else if (userIn.equals("Save")) {
-            saveSchedule();
-            run();
-        } else if (userIn.equals("Quit")) {
-            saveSchedule();
-            System.out.println("Ciao!");
-            System.exit(0);
-        } else {
-            // throw error
-            System.out.println("WRONG OUTPUT");
-            run();
-        }
-
+        guiMain.main();
     }
 
 
@@ -102,13 +69,26 @@ public class Schedule {
 
 
     // EFFECTS: prints out the current list of dates
-    public static void printDates() {
-        System.out.println("\n");
+
+    // this version prints to console
+//    public static void printDates() {
+//        System.out.println("\n");
+//        for (Date d : dates) {
+//            System.out.println(d.getDate());
+//            d.printPlans();
+//            System.out.println("\n");
+//        }
+//    }
+
+    public static String printDates() {
+        String curSchedule = "";
+        curSchedule.concat("\n");
         for (Date d : dates) {
-            System.out.println(d.getDate());
-            d.printPlans();
-            System.out.println("\n");
+            curSchedule.concat(d.getDate());
+//            curSchedule.concat(d.printPlans());
+            curSchedule.concat("\n");
         }
+        return curSchedule;
     }
 
 
@@ -222,7 +202,7 @@ public class Schedule {
         }
     }
 
-    public void saveSchedule() {
+    public static void save() {
         try {
             CreateJSONFile.create();
         } catch (IOException e) {

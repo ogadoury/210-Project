@@ -5,8 +5,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class RmPlan {
+    private static JFrame frame = guiMain.frame;
     private JButton removeButton;
-    private JPanel panelMain;
+    JPanel panelMain;
     private JTextField DateField;
     private JTextField PlanField;
 
@@ -20,12 +21,17 @@ public class RmPlan {
                 Schedule.findDateAndRmPlan(dateName, planAct);
                 DateField.setText("");
                 PlanField.setText("");
+
+                // back to main window
+                frame.setContentPane(new guiMain().panelMain);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
             }
         });
     }
 
     public static void main() {
-        JFrame frame = new JFrame("RmPlan");
         frame.setContentPane(new RmPlan().panelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
