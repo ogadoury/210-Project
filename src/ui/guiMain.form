@@ -56,9 +56,9 @@
           <text value="Print Schedule"/>
         </properties>
       </component>
-      <component id="52f2e" class="javax.swing.JTextPane" binding="currentSchedule">
+      <component id="39369" class="javax.swing.JList" binding="currentSchedule">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>

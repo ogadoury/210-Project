@@ -13,7 +13,7 @@ public class guiMain {
     private JButton removePlanButton;
     private JButton saveAndQuitButton;
     private JButton printScheduleButton;
-    private JTextPane currentSchedule;
+    private JList currentSchedule;
 
     public guiMain() {
         addDateButton.addActionListener(new ActionListener() {
@@ -69,7 +69,7 @@ public class guiMain {
     }
 
     public void showSchedule() {
-        currentSchedule.setText(Schedule.printDates());
+        currentSchedule.setListData(Schedule.getDatesObject());
     }
 
 

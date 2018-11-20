@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -38,9 +39,14 @@ public class Date implements Observer {
     // REQUIRES: the plan given exists in the list of plans
     // MODIFIES: this
     // EFFECTS: removes the given plan from the list of plans
-    public void removePlan(Plan plan) {
-        if (getPlans().contains(plan)) {
-            plans.remove(plan);
+    public void removePlan(String planName) {
+        Iterator<Plan> iterator = plans.iterator();
+        while (iterator.hasNext()) {
+            Plan curPlan = iterator.next();
+            if (curPlan.getActivity().equals(planName)) {
+                iterator.remove();
+                System.out.println("Removed plan: " + curPlan.getActivity() + " from date: " + this.getDate());
+            }
         }
     }
 

@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="634fedb8-5bd0-4922-b6e3-f973e930a6f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/210-Project/ui/Schedule.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/210-Project/ui/Schedule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/AddDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/AddDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/AddPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/AddPlan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/RmDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/RmDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/RmPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/RmPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/210-Project/ui/Schedule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved-planner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/saved-planner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Date.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Schedule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/guiMain.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/guiMain.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/guiMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/guiMain.java" afterDir="false" />
@@ -40,34 +38,34 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
+          <entry key="class" value="2" />
           <entry key="form" value="8" />
           <entry key="iml" value="1" />
-          <entry key="java" value="39" />
+          <entry key="java" value="45" />
           <entry key="properties" value="1" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
+          <entry key="CLASS" value="2" />
           <entry key="GUI_DESIGNER_FORM" value="8" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="39" />
+          <entry key="JAVA" value="45" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="Properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4745" />
-          <entry key="txt" value="142" />
+          <entry key="java" value="5529" />
+          <entry key="txt" value="189" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4745" />
-          <entry key="PLAIN_TEXT" value="142" />
+          <entry key="JAVA" value="5529" />
+          <entry key="PLAIN_TEXT" value="189" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -78,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ui/Schedule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="83" column="32" lean-forward="true" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+            <state relative-caret-position="268">
+              <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
               <folding>
                 <element signature="e#394#395#0" expanded="true" />
                 <element signature="e#422#423#0" expanded="true" />
@@ -91,16 +89,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/Date.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="47" column="75" selection-start-line="47" selection-start-column="75" selection-end-line="47" selection-end-column="75" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#379#380#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ui/guiMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+            <state relative-caret-position="208">
+              <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2433#2434#0" expanded="true" />
                 <element signature="e#2479#2480#0" expanded="true" />
-                <element signature="e#602#603#0" expanded="true" />
-                <element signature="e#632#633#0" expanded="true" />
+                <element signature="e#2556#2557#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,7 +121,7 @@
         <entry file="file://$PROJECT_DIR$/saved-planner.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="10" selection-start-column="10" selection-end-column="10" />
+              <caret column="44" selection-start-column="44" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -118,6 +129,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ui/guiMain.form">
           <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/RmDate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="18" column="41" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -128,6 +151,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>iterator</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -144,7 +172,6 @@
         <option value="$PROJECT_DIR$/src/model/Plan.java" />
         <option value="$PROJECT_DIR$/src/model/Guest.java" />
         <option value="$PROJECT_DIR$/src/ui/App.form" />
-        <option value="$PROJECT_DIR$/src/model/Date.java" />
         <option value="$PROJECT_DIR$/src/ui/AddPlan.form" />
         <option value="$PROJECT_DIR$/src/ui/AddDate.form" />
         <option value="$PROJECT_DIR$/src/ui/RmDate.form" />
@@ -153,10 +180,11 @@
         <option value="$PROJECT_DIR$/src/ui/AddPlan.java" />
         <option value="$PROJECT_DIR$/src/ui/RmPlan.java" />
         <option value="$PROJECT_DIR$/src/ui/AddDate.java" />
-        <option value="$PROJECT_DIR$/src/ui/Schedule.java" />
-        <option value="$PROJECT_DIR$/saved-planner.txt" />
         <option value="$PROJECT_DIR$/src/ui/guiMain.form" />
+        <option value="$PROJECT_DIR$/saved-planner.txt" />
+        <option value="$PROJECT_DIR$/src/ui/Schedule.java" />
         <option value="$PROJECT_DIR$/src/ui/guiMain.java" />
+        <option value="$PROJECT_DIR$/src/model/Date.java" />
       </list>
     </option>
   </component>
@@ -371,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542660693759</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="complete basic gui">
+      <created>1542687629811</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1542687629811</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -385,7 +420,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290653" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3277849" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49926144" visible="true" weight="0.3277849" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39948782" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -393,7 +428,7 @@
       <window_info anchor="bottom" id="Problems" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50073856" side_tool="true" weight="0.3277849" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3290653" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -411,7 +446,8 @@
     <MESSAGE value="added observer pattern" />
     <MESSAGE value="added gui for addPlan and addDate" />
     <MESSAGE value="added gui for rmPlan and rmDate" />
-    <option name="LAST_COMMIT_MESSAGE" value="added gui for rmPlan and rmDate" />
+    <MESSAGE value="complete basic gui" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete basic gui" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/210-Project.iml">
@@ -438,13 +474,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="908" selection-start-line="908" selection-end-line="908" />
         </state>
       </provider>
     </entry>
@@ -529,16 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/javax/swing/JComboBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3248">
@@ -583,16 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/RmDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-47">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/RmPlan.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -613,20 +622,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/javax/swing/JEditorPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="1406" column="16" selection-start-line="1406" selection-start-column="16" selection-end-line="1406" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/guiMain.form">
       <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/saved-planner.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
+          <caret column="44" selection-start-column="44" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/RmDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/rt.jar!/com/apple/laf/AquaButtonUI.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="481" selection-start-line="481" selection-end-line="481" />
+          <folding>
+            <element signature="e#18045#18046#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="522" column="19" selection-start-line="522" selection-start-column="19" selection-end-line="522" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/guiMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2433#2434#0" expanded="true" />
+            <element signature="e#2479#2480#0" expanded="true" />
+            <element signature="e#2556#2557#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/Schedule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="83" column="32" lean-forward="true" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+        <state relative-caret-position="268">
+          <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
           <folding>
             <element signature="e#394#395#0" expanded="true" />
             <element signature="e#422#423#0" expanded="true" />
@@ -636,16 +699,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/guiMain.java">
+    <entry file="file://$PROJECT_DIR$/src/model/Date.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+        <state relative-caret-position="385">
+          <caret line="47" column="75" selection-start-line="47" selection-start-column="75" selection-end-line="47" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2433#2434#0" expanded="true" />
-            <element signature="e#2479#2480#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
           </folding>
         </state>
       </provider>

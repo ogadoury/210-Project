@@ -6,6 +6,7 @@ import model.Plan;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 
@@ -71,24 +72,27 @@ public class Schedule {
     // EFFECTS: prints out the current list of dates
 
     // this version prints to console
-//    public static void printDates() {
-//        System.out.println("\n");
-//        for (Date d : dates) {
-//            System.out.println(d.getDate());
-//            d.printPlans();
-//            System.out.println("\n");
-//        }
-//    }
-
-    public static String printDates() {
-        String curSchedule = "";
-        curSchedule.concat("\n");
+    public static void printDates() {
+        System.out.println("\n");
         for (Date d : dates) {
-            curSchedule.concat(d.getDate());
-//            curSchedule.concat(d.printPlans());
-            curSchedule.concat("\n");
+            System.out.println(d.getDate());
+            d.printPlans();
+            System.out.println("\n");
         }
-        return curSchedule;
+    }
+
+    public static Object[] getDatesObject() {
+        ArrayList<String> currentSchedule = new ArrayList<>();
+        for (Date d : getDates()) {
+            String dateWPlans = d.getDate() + " : ";
+
+            ArrayList<String> plans = new ArrayList<>();
+            for (Plan p : d.getPlans()) {
+                dateWPlans += p.getActivity() + "; ";
+            }
+            currentSchedule.add(dateWPlans);
+        }
+        return currentSchedule.toArray();
     }
 
 
@@ -174,9 +178,12 @@ public class Schedule {
     }
 
     public static void findAndRemoveDate(String dateName) {
-        for (Date d : dates) {
-            if (d.getDate().equals(dateName)) {
-                removeDate(d);
+        Iterator<Date> iterator = dates.iterator();
+        while (iterator.hasNext()) {
+            Date curDate = iterator.next();
+            if (curDate.getDate().equals(dateName)) {
+                iterator.remove();
+                System.out.println("removing: " + curDate);
             }
         }
     }
@@ -190,17 +197,14 @@ public class Schedule {
     }
 
     public static void findDateAndRmPlan(String dateName, String planName) {
-        for (Date d : dates) {
-            if (d.getDate().equals(dateName)) {
-                for (Plan p : d.getPlans()) {
-                    if (p.getActivity().equals(planName)) {
-                        p.cancelPlan();
-                        d.removePlan(p);
-                    }
+        Iterator<Date> iterator = dates.iterator();
+        while (iterator.hasNext()) {
+            Date curDate = iterator.next();
+            if (curDate.getDate().equals(dateName)) {
+                curDate.removePlan(planName);
                 }
             }
         }
-    }
 
     public static void save() {
         try {
