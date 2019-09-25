@@ -88,7 +88,10 @@ public class Schedule {
 
             ArrayList<String> plans = new ArrayList<>();
             for (Plan p : d.getPlans()) {
-                dateWPlans += p.getActivity() + "; ";
+                dateWPlans +=  '\n' + "plan: " +p.getActivity() + '\n';
+                if (!p.getObservers().isEmpty()) {
+                    dateWPlans += "\nguests: " + p.printObservers() + "\n";
+                }
             }
             currentSchedule.add(dateWPlans);
         }

@@ -33,8 +33,7 @@ public class ReadJSONFile {
                     p.setActivity(plan.toString());
                     newDate.addPlan(p);
                 }
-                dates.add(newDate);
-                Schedule.setDates(dates);
+                Schedule.addDate(newDate);
             }
 
 //            JsonArray dates = (JsonArray) json.get("dates");

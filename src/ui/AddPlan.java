@@ -1,5 +1,6 @@
 package ui;
 
+import model.Guest;
 import model.Plan;
 
 import javax.swing.*;
@@ -22,9 +23,21 @@ public class AddPlan {
                 String DateName = dateTo.getText();
 
                 if (Schedule.findDate(DateName)) {
+                    // creates the plan
                     Plan newPlan = new Plan();
                     newPlan.setActivity(PlanActivity.getText());
                     Schedule.findDateAndAddPlan(DateName, newPlan);
+
+                    // checks if there is a guest in the field
+                    String guestName = GuestName.getText();
+                    if (!guestName.equals("")) {
+                        Guest guest = new Guest();
+                        guest.setName(guestName);
+                        newPlan.addObserver(guest);
+                    }
+
+
+                    // prints the updated schedule
                     Schedule.printDates();
 
                     // back to main window

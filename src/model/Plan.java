@@ -24,9 +24,23 @@ public class Plan extends Observable {
         guests.remove(g);
     }
 
+    public List<Guest> getObservers() {
+        return guests;
+    }
+
+    public String printObservers() {
+        String output = "";
+        for (Guest g:guests) {
+            output += g.getName() + ";";
+        }
+        return output;
+    }
+
     public void cancelPlan() {
         for (Guest guest : guests) {
             guest.update(this, this);
         }
     }
+
+
 }
